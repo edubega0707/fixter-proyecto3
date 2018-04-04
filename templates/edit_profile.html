@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="log-container">
+    <div>
+        <h3>Editar Perfil</h3>
+        <form action="{% url 'accounts:edit' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type='submit'>Guardar perfil</button>
+        </form>
+  
+    </div>
+</div>
+
+{%endblock content%}
